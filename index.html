@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lauda de contatos planos de saúde</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+
+</head>
+
+<body>
+    <header>
+        <img src="/./www.rvcplanosdesaude.com.br/static/img/Logo-RVC-300x89.png" alt="logo-topo" class="logo-topo">
+    </header>
+
+    <div class="image-container" id="image-container">
+        <img src="/./www.rvcplanosdesaude.com.br/static/img/Bestsenior-velhinhos-1100x458.png" class="active"
+            id="Bestsenior" alt="Imagem 1" class="active">
+        <img src="/./www.rvcplanosdesaude.com.br/static/img/Medsenior-velhinhos-academia-1100x258.png" alt="Imagem 2"
+            class="active">
+        <img src="/./www.rvcplanosdesaude.com.br/static/img/Unimed-medicos-1100x258.png" alt="Imagem 3" class="active">
+    </div>
+
+    <main>
+        <section>
+            <h1>Bem-vindo à nossa lauda de planos de saúde</h1>
+            <p>Descubra os melhores planos de saúde e obtenha informações valiosas.</p>
+            <form id="contato-form">
+                <!-- Formulário de contato -->
+                <input type="text" id="nome" name="nome" placeholder="Nome">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Rodapez da página -->
+    </footer>
+
+    <script src="/static/js/script.js>"></script>
+    <script>
+
+        const images = document.querySelectorAll('.image-container img');
+        let currentIndex = 0;
+
+        function changeImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+
+        // troca a cada 3 segundos
+        setInterval(changeImage, 3000);
+
+    </script>
+</body>
+
+</html>
