@@ -5,56 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lauda de contatos planos de saúde</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="static\css\styles.css">
 
 </head>
 
 <body>
     <header>
-        <img src="/./www.rvcplanosdesaude.com.br/static/img/Logo-RVC-300x89.png" alt="logo-topo" class="logo-topo">
+
+        <img src="static/img/Logo-RVC-300x90.png" alt="logo-topo" class="logo-topo">
     </header>
 
-    <div class="image-container" id="image-container">
-        <img src="/./www.rvcplanosdesaude.com.br/static/img/Bestsenior-velhinhos-1100x458.png" class="active"
-            id="Bestsenior" alt="Imagem 1" class="active">
-        <img src="/./www.rvcplanosdesaude.com.br/static/img/Medsenior-velhinhos-academia-1100x258.png" alt="Imagem 2"
-            class="active">
-        <img src="/./www.rvcplanosdesaude.com.br/static/img/Unimed-medicos-1100x258.png" alt="Imagem 3" class="active">
+    <div class="carousel" id="image-container">
+        <img src="/static/img/img1.png" class="active" alt="Imagem 1">
+        <img src="/static/img/img2.png" alt="Imagem 2">
+        <img src="/static/img/img3.png" alt="Imagem 3">
+
+        <div class="controls">
+            <button id="prev">&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+
+        <div class="indicators">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 
     <main>
         <section>
-            <h1>Bem-vindo à nossa lauda de planos de saúde</h1>
-            <p>Descubra os melhores planos de saúde e obtenha informações valiosas.</p>
-            <form id="contato-form">
-                <!-- Formulário de contato -->
-                <input type="text" id="nome" name="nome" placeholder="Nome">
-                <input type="email" id="email" name="email" placeholder="Email">
-                <input type="submit" value="Enviar">
-            </form>
+            <div class="bemvindo">
+                <h1>Bem-vindo à nossa lauda de planos de saúde</h1>
+                <p>Descubra os melhores planos de saúde e obtenha informações valiosas.</p>
+            </div>
         </section>
+
+        <div class="conteudo-3colunas">
+            <!-- Coluna esquerda -->
+            <div class="coluna-esquerda">
+                <section id="beneficios">
+                    <h2>Por que escolher nossos planos?</h2>
+                    <div class="beneficios-container">
+                        <div class="beneficio">✅ Atendimento personalizado</div>
+                        <div class="beneficio">✅ Planos para todas as idades</div>
+                        <div class="beneficio">✅ Suporte rápido e confiável</div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Coluna do meio (formulário) -->
+            <div class="coluna-meio">
+                <form id="contato-form">
+                    <input type="text" id="nome" name="nome" placeholder="Nome">
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <input type="tel" id="telefone" name="telefone" placeholder="Telefone">
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+
+            <!-- Coluna direita -->
+            <div class="coluna-direita">
+                <section id="sobre">
+                    <h2>Sobre mim</h2>
+                    <p>Sou Rogerio Vieira, especialista em planos de saúde, ajudando pessoas a encontrarem a melhor
+                        opção
+                        para cuidar da sua saúde e bem-estar.</p>
+                </section>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <!-- Rodapez da página -->
+        <p>&copy; 2026 Rogerio Vieira - Todos os direitos reservados</p>
+        <p>📞 (27) 99999-9999 | ✉️ contato@rogeriovieira.com | 💬 WhatsApp disponível</p>
     </footer>
 
-    <script src="/static/js/script.js>"></script>
-    <script>
-
-        const images = document.querySelectorAll('.image-container img');
-        let currentIndex = 0;
-
-        function changeImage() {
-            images[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % images.length;
-            images[currentIndex].classList.add('active');
-        }
-
-        // troca a cada 3 segundos
-        setInterval(changeImage, 3000);
-
-    </script>
+    <script src="/static/js/scripts.js" defer></script>
 </body>
 
 </html>
