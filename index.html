@@ -1,86 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lauda de contatos planos de saúde</title>
-    <link rel="stylesheet" type="text/css" href="static\css\styles.css">
-
+    <title>Página contatos planos de saúde</title>
+    <link rel="shortcut icon" href="static/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
 </head>
-
 <body>
-    <header>
+<header id="pageHeader">
+    <!-- Logo -->
+    <img src="static/img/Logo-RVC-300x90.png" alt="logo-topo" class="logo-topo">
 
-        <img src="static/img/Logo-RVC-300x90.png" alt="logo-topo" class="logo-topo">
-    </header>
+    <!-- Título -->
+    <h2>RVC Assessoria em Planos de Saúde</h2>
 
-    <div class="carousel" id="image-container">
-        <img src="/static/img/img1.png" class="active" alt="Imagem 1">
-        <img src="/static/img/img2.png" alt="Imagem 2">
-        <img src="/static/img/img3.png" alt="Imagem 3">
+    <!-- Contatos -->
+    <div class="contact-info">
+        <p>
+            <i class="fas fa-envelope"></i>
+            Email: <a href="mailto:rogeriovc1000@gmail.com">rogeriovc1000@gmail.com</a>
 
-        <div class="controls">
-            <button id="prev">&#10094;</button>
-            <button id="next">&#10095;</button>
-        </div>
-
-        <div class="indicators">
-            <span class="active"></span>
-            <span></span>
-            <span></span>
-        </div>
+        </p>
+        <p>
+            <i class="fas fa-phone"></i> 
+            Telefone: (27) 99527-7207
+        </p>
+        <p>
+            <i class="fab fa-whatsapp" style="font-size:25px; color:green;"></i>
+            <a href="https://api.whatsapp.com/send?phone=5527995277207" target="_blank">
+                Clique aqui para enviar mensagem no WhatsApp
+            </a>
+        </p>
     </div>
-
-    <main>
-        <section>
-            <div class="bemvindo">
-                <h1>Bem-vindo à nossa lauda de planos de saúde</h1>
-                <p>Descubra os melhores planos de saúde e obtenha informações valiosas.</p>
-            </div>
-        </section>
-
-        <div class="conteudo-3colunas">
-            <!-- Coluna esquerda -->
-            <div class="coluna-esquerda">
-                <section id="beneficios">
-                    <h2>Por que escolher nossos planos?</h2>
-                    <div class="beneficios-container">
-                        <div class="beneficio">✅ Atendimento personalizado</div>
-                        <div class="beneficio">✅ Planos para todas as idades</div>
-                        <div class="beneficio">✅ Suporte rápido e confiável</div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- Coluna do meio (formulário) -->
-            <div class="coluna-meio">
-                <form id="contato-form">
-                    <input type="text" id="nome" name="nome" placeholder="Nome">
-                    <input type="email" id="email" name="email" placeholder="Email">
-                    <input type="tel" id="telefone" name="telefone" placeholder="Telefone">
-                    <input type="submit" value="Enviar">
-                </form>
-            </div>
-
-            <!-- Coluna direita -->
-            <div class="coluna-direita">
-                <section id="sobre">
-                    <h2>Sobre mim</h2>
-                    <p>Sou Rogerio Vieira, especialista em planos de saúde, ajudando pessoas a encontrarem a melhor
-                        opção
-                        para cuidar da sua saúde e bem-estar.</p>
-                </section>
+</header>
+    <!-- Coluna esquerda -->
+    <nav class="coluna-esquerda" id="nav">
+        <div id="beneficios">
+            <h2>Por que escolher nossos planos?</h2>
+            <div class="beneficios-container">
+                <div class="beneficio">✅ Atendimento personalizado</div>
+                <div class="beneficio">✅ Planos para todas as idades</div>
+                <div class="beneficio">✅ Suporte rápido e confiável</div>
             </div>
         </div>
-    </main>
+    </nav>
+
+    <!-- Coluna do meio -->
+    <article class="coluna-meio">
+        <!-- Carrossel -->
+        <div class="carousel" id="image-container">
+            <img src="static/img/img1.png" class="active" alt="Imagem 1">
+            <img src="static/img/img2.png" alt="Imagem 2">
+            <img src="static/img/img3.png" alt="Imagem 3">
+            <img src="static/img/img4.png" alt="Imagem 4">
+
+            <div class="controls">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+            </div>
+
+            <div class="indicators">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Formulário -->
+        <form id="contato-form">
+            <input type="text" id="nome" name="nome" placeholder="Nome">
+            <input type="email" id="email" name="email" placeholder="Email">
+            <input type="tel" id="telefone" name="telefone" placeholder="Telefone">
+            <input type="submit" value="Enviar">
+        </form>
+    </article>
+
+    <!-- Coluna direita -->
+    <div class="coluna-direita" id="ads">
+        <section id="sobre">
+            <h2>Sobre mim</h2>
+            <p>Sou Rogerio Vieira, especialista em planos de saúde, ajudando pessoas a encontrarem a melhor opção para cuidar da sua saúde e bem-estar.</p>
+        </section>
+    </div>
 
     <footer>
         <p>&copy; 2026 Rogerio Vieira - Todos os direitos reservados</p>
-        <p>📞 (27) 99999-9999 | ✉️ contato@rogeriovieira.com | 💬 WhatsApp disponível</p>
+      
     </footer>
-
-    <script src="/static/js/scripts.js" defer></script>
 </body>
-
+    <script src="static/js/scripts.js"></script>
 </html>

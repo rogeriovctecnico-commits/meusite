@@ -1,69 +1,111 @@
 /* Reset */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-
-/* Estrutura geral */
+.fas fa envelope {
+    color: #0ea495;
+    margin-right: 5px;
+}
 body {
     font-family: Arial, sans-serif;
-    background: #f0f0f0;
-    display: flex;
-    flex-direction: column;
-    /* organiza em coluna */
-    align-items: center;
+    background-color: #0ea495;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav article ads"
+        "footer footer footer";
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-columns: 30% 1fr 15%;
+    grid-gap: 10px;
     min-height: 100vh;
 }
 
-/* Cabeçalho */
+/* Header */
 header {
-    width: 100%;
-    background: #fff;
-    padding: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    grid-area: header;
+    background-color: #fff;
     display: flex;
-    height: 80px;
-    justify-content: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
 .logo-topo {
     max-width: 150px;
     height: auto;
-    margin-top: auto;
-    margin-left: 20px;
-    border-radius: 15px;
+    display: block;
+}
+
+header h2 {
+    flex: 1;
+    text-align: center;
+}
+
+/* Nav (coluna esquerda) */
+nav.coluna-esquerda {
+    grid-area: nav;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#beneficios h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.beneficios-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.beneficio {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Article (coluna do meio) */
+article.coluna-meio,
+article.carousel {
+    grid-area: article;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Carrossel */
 .carousel {
-    margin: 05px 0;
     position: relative;
-    overflow: hidden;
     width: 100%;
-    height: 350px;
-    border-style: none;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .carousel img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    display: none;
 }
 
 .carousel img.active {
     opacity: 1;
+    display: block;
     z-index: 1;
 }
 
-/* Botões de controle */
 .controls {
     position: absolute;
     top: 50%;
@@ -74,215 +116,137 @@ header {
 }
 
 .controls button {
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
+    background: rgba(0,0,0,0.5);
     color: #fff;
-    font-size: 2em;
+    border: none;
     padding: 10px;
     cursor: pointer;
-    border-radius: 50%;
-    transition: background 0.3s;
 }
 
-.controls button:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-/* Indicadores */
 .indicators {
-    position: absolute;
-    bottom: 15px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 8px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .indicators span {
-    width: 12px;
-    height: 12px;
-    background: #bbb;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ccc;
     border-radius: 50%;
+    margin: 0 5px;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
 .indicators span.active {
     background: #333;
 }
 
-/* Conteúdo principal */
-main {
-    text-align: center;
-    max-width: 400px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-}
-
-main h1 {
-    margin-bottom: 10px;
-    font-size: 1.4em;
-    color: #333;
-}
-
-main p {
-    margin-bottom: 15px;
-    color: #555;
-}
-
 /* Formulário */
 form {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-form input[type="text"],
-form input[type="email"] {
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-form input[type="submit"] {
-    background: #333;
+input:focus {
+    border-color: #333;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+input[type="submit"] {
+    background-color: #333;
     color: #fff;
+    padding: 10px;
     border: none;
-    padding: 12px;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.2s ease;
 }
 
-form input[type="submit"]:hover {
-    background: #555;
+input[type="submit"]:hover {
+    background-color: #555;
 }
 
-/* Rodapé */
-footer {
-    margin-top: auto;
-    padding: 15px;
-    text-align: center;
-    font-size: 0.9em;
-    color: #666;
-}
-
-/* Benefícios */
-#beneficios {
-    margin: 30px 0;
-    text-align: center;
-}
-
-#beneficios h2 {
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.beneficios-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    /* adapta em telas menores */
-}
-
-.beneficio {
-    background: #fff;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    font-weight: bold;
-    color: #444;
-}
-
-/* Sobre */
-#sobre {
-    margin: 30px 0;
-    text-align: center;
-    max-width: 500px;
-}
-
-#sobre h2 {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-#sobre p {
-    color: #555;
-    line-height: 1.5;
-}
-
-/* Container em duas colunas */
-.conteudo {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-    /* empilha em telas menores */
-}
-
-/* Coluna esquerda (formulário) */
-.coluna-esquerda {
-    flex: 1;
-    max-width: 300px;
-    background: #fff;
+/* Ads (coluna direita) */
+#ads {
+    grid-area: ads;
+    background-color: #fff;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Coluna direita (benefícios + sobre) */
-.coluna-direita {
-    flex: 1;
-    max-width: 400px;
+/* Footer */
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Seção de contatos abaixo do footer */
+.contatos {
+    background-color: #fff;
+    color: #110d0d;
+    padding: 30px;
+    text-align: center;
+    border-top: 2px solid #0ea495;
+}
+.contato-form{
+    border-style: solid;
+    border-color: #0ea495;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
+}
+.contatos h2 {
+    margin-bottom: 15px;
 }
 
-/* Benefícios */
-#beneficios {
-    text-align: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.contatos a {
+    color: #0ea495;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.beneficios-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 15px;
+.contatos a:hover {
+    text-decoration: underline;
 }
 
-.beneficio {
-    background: #f9f9f9;
-    padding: 10px 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
+/* Responsividade */
+@media (max-width: 900px) {
+    body {
+        grid-template-areas:
+            "header"
+            "nav"
+            "article"
+            "ads"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 
-/* Sobre */
-#sobre {
-    text-align: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.bemvindo {
-    text-align: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-left: 0;
+    nav.coluna-esquerda,
+    article.coluna-meio,
+    #ads {
+        margin: 10px;
+    }
 }
