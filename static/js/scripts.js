@@ -40,3 +40,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     showImage(currentIndex);
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contato-form");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // evita o envio padrão
+
+        // Captura os valores dos campos
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const telefone = document.getElementById("telefone").value;
+
+        // Monta a mensagem
+        const mensagem = `Olá, meu nome é ${nome}. 
+                            Email: ${email} 
+                            Telefone: ${telefone} + ". Mensagem da Landpage"`;
+
+        // Número do WhatsApp (com DDI e DDD)
+        const numeroWhatsApp = "5527995277207";
+
+        // Monta a URL da API do WhatsApp
+        const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensagem)}`;
+
+        // Abre o WhatsApp em nova aba
+        window.open(url, "_blank");
+    });
+});
