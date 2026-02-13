@@ -4,13 +4,15 @@
     margin: 0;
     padding: 0;
 }
+
 .fas fa envelope {
     color: #0ea495;
     margin-right: 5px;
 }
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #0ea495;
+    background-color: #fff;
     display: grid;
     grid-template-areas:
         "header header header"
@@ -31,16 +33,29 @@ header {
     justify-content: space-between;
     padding: 0 20px;
 }
-
-.logo-topo {
-    max-width: 150px;
+.coracao-com-pulso {
+    max-width: 100px;
     height: auto;
     display: block;
+    margin-left: 20px;
+}
+.logo-topo {
+    max-width: 130px;
+    height: auto;
+    display: block;
+    margin-left: 0px;
 }
 
-header h2 {
+.pageHeader h2 {
     flex: 1;
     text-align: center;
+}
+
+.coracao-com-pulso {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin-left: 20px;
 }
 
 /* Nav (coluna esquerda) */
@@ -49,7 +64,51 @@ nav.coluna-esquerda {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: none;       /* sem cor de fundo */
+    border: none;           /* sem borda */
+    box-shadow: none;       /* sem sombra */
+    padding: 20px;          /* mantém espaçamento interno */
+
+}
+nav.coluna-esquerda h2, article.coluna-meio h2, 
+    footer.coluna-direita h2, #ads h2 {
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#planos-esquerda {
+    margin-top: auto;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+}
+
+.planos-container {
+    width: 132px;
+    height: auto;
+    border-radius: 4px;
+
+    object-fit: contain;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+    margin-bottom: 50px;
+    margin-left: 120px;
+}
+
+.planos-container img {
+    width: 150px;
+    align-items: center;
+    height: auto;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+#beneficios {
+    grid-area: nav;
+    padding: 10px;
+    /* border-radius: 5px; */
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
 }
 
 #beneficios h2 {
@@ -58,16 +117,17 @@ nav.coluna-esquerda {
 }
 
 .beneficios-container {
+    align-items: center;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .beneficio {
-    background-color: #f5f5f5;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 /* Article (coluna do meio) */
@@ -77,7 +137,6 @@ article.carousel {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,7 +175,7 @@ article.carousel {
 }
 
 .controls button {
-    background: rgba(0,0,0,0.5);
+    background-color: rgba(7, 107, 45, 0.5);
     color: #fff;
     border: none;
     padding: 10px;
@@ -132,7 +191,7 @@ article.carousel {
     display: inline-block;
     width: 10px;
     height: 10px;
-    background: #ccc;
+    background: #fff;
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
@@ -154,21 +213,22 @@ form {
 
 input[type="text"],
 input[type="email"],
-input[type="tel"] {
+input[type="tel"],
+input[type="plano"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 input:focus {
     border-color: #333;
     outline: none;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 input[type="submit"] {
-    background-color: #333;
+    background-color: #2922b2;
     color: #fff;
     padding: 10px;
     border: none;
@@ -178,7 +238,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #555;
+    background-color: #046b12;
 }
 
 /* Ads (coluna direita) */
@@ -187,7 +247,20 @@ input[type="submit"]:hover {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#ads p {
+    text-align: justify;
+}
+
+#ads h2 {
+    margin-bottom: 15px;
+}
+
+#ads img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 /* Footer */
@@ -207,7 +280,8 @@ footer {
     text-align: center;
     border-top: 2px solid #0ea495;
 }
-.contato-form{
+
+.contato-form {
     border-style: solid;
     border-color: #0ea495;
     margin-top: 50px;
@@ -217,6 +291,7 @@ footer {
     flex-direction: column;
     gap: 10px;
 }
+
 .contatos h2 {
     margin-bottom: 15px;
 }
@@ -247,6 +322,42 @@ footer {
     nav.coluna-esquerda,
     article.coluna-meio,
     #ads {
-        margin: 10px;
-    }
+    background: none;       /* sem cor de fundo */
+    border: none;           /* sem borda */
+    box-shadow: none;       /* sem sombra */
+    padding: 20px;          /* mantém espaçamento interno */
+
+}
+
+.planos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.planos li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    /* linhas finas */
+    color: #444;
+    font-size: 15px;
+}
+
+.planos li:last-child {
+    border-bottom: none;
+}
+
+.planos li:hover {
+    background-color: #f5f5f5;
+}
+#planos-direita{
+    text-align: center;
+}}
+.grid-item {
+    border: none;
+    outline: none;
+    box-shadow: none;
 }

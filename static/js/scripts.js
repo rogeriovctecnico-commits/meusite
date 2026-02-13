@@ -11,35 +11,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function showImage(index) {
         images.forEach((img, i) => {
-            img.classList.toggle("active", i === index);
-            indicators[i].classList.toggle("active", i === index);
-        });
+    img.classList.toggle("active", i === index);
+    if (indicators) { // Check if the indicators are not undefined
+        indicators[i].classList.toggle("active", i === index);
     }
+});
 
     prevBtn.addEventListener("click", () => {
         currentIndex = (currentIndex - 1 + total) % total;
         showImage(currentIndex);
-    });
+    }),
 
     nextBtn.addEventListener("click", () => {
         currentIndex = (currentIndex + 1) % total;
         showImage(currentIndex);
-    });
-
+    }),
     indicators.forEach((indicator, i) => {
+    if (indicator) { // Check if the indicator is not undefined
         indicator.addEventListener("click", () => {
             currentIndex = i;
             showImage(currentIndex);
         });
-    });
+    }
+});
 
     setInterval(() => {
         currentIndex = (currentIndex + 1) % total;
         showImage(currentIndex);
-    }, 5000);
+    }, 5000),
 
     showImage(currentIndex);
-});
+};
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contato-form");
 
@@ -65,4 +67,4 @@ document.addEventListener("DOMContentLoaded", function () {
         // Abre o WhatsApp em nova aba
         window.open(url, "_blank");
     });
-});
+})});

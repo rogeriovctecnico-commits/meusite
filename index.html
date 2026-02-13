@@ -1,54 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Página contatos planos de saúde</title>
     <link rel="shortcut icon" href="static/img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+
 </head>
+
 <body>
-<header id="pageHeader">
-    <!-- Logo -->
-    <img src="static/img/Logo-RVC-300x90.png" alt="logo-topo" class="logo-topo">
+    <header id="pageHeader" class="grid-item">
+        <!-- Logo -->
+        <div><img src="static/img/icons8-coração-com-pulso.gif" alt="coracao-com-pulso" class="coracao-com-pulso"></div>
+        <img src="static/img/Logo-RVC-300x90.png" alt="logo-topo" class="logo-topo"><br>
 
-    <!-- Título -->
-    <h2>RVC Assessoria em Planos de Saúde</h2>
+        <!-- Título -->
+        <h2>RVC Assessoria em Planos de Saúde</h2>
 
-    <!-- Contatos -->
-    <div class="contact-info">
-        <p>
-            <i class="fas fa-envelope"></i>
-            Email: <a href="mailto:rogeriovc1000@gmail.com">rogeriovc1000@gmail.com</a>
+        <!-- Contatos -->
+        <div class="contact-info">
+            <p>
+                <i class="fas fa-envelope"></i>
+                Email: <a href="mailto:rogeriovc1000@gmail.com">rogeriovc1000@gmail.com</a>
 
-        </p>
-        <p>
-            <i class="fas fa-phone"></i> 
-            Telefone: (27) 99527-7207
-        </p>
-        <p>
-            <i class="fab fa-whatsapp" style="font-size:25px; color:green;"></i>
-            <a href="https://api.whatsapp.com/send?phone=5527995277207" target="_blank">
-                Clique aqui para enviar mensagem no WhatsApp
-            </a>
-        </p>
-    </div>
-</header>
+            </p>
+            <p>
+                <i class="fas fa-phone"></i>
+                Telefone: (27) 99527-7207
+            </p>
+            <p>
+                <i class="fab fa-whatsapp" style="font-size:25px; color:green;"></i>
+                <a href="https://api.whatsapp.com/send?phone=5527995277207" target="_blank">
+                    Clique aqui para enviar mensagem no WhatsApp
+                </a>
+            </p>
+        </div>
+    </header>
     <!-- Coluna esquerda -->
-    <nav class="coluna-esquerda" id="nav">
-        <div id="beneficios">
+    <nav class="coluna-esquerda" class="grid-item" id="nav">
+
+        <div id="planos-esquerda" class="grid-item"''>
+            <div class="planos-container">
+                <img src="static/img/icone-bradesco.png" alt="Bradesco" width="150">
+                <img src="static/img/unimed-seeklogo.png" alt="Unimed" width="150">
+                <img src="static/img/sulmamerica-icone.png" alt="SulAmérica" width="150">
+                <img src="static/img/icone-amil.png" alt="Amil" width="150">
+
+            </div>
+        </div>
+        <div id="beneficios" class="grid-item">
             <h2>Por que escolher nossos planos?</h2>
-            <div class="beneficios-container">
+            <div class="beneficios-container" class="grid-item">
                 <div class="beneficio">✅ Atendimento personalizado</div>
                 <div class="beneficio">✅ Planos para todas as idades</div>
-                <div class="beneficio">✅ Suporte rápido e confiável</div>
+                <div class="beneficio">✅ Assessoria rápida e confiável</div>
+                <div class="beneficio">✅ Suporte no Pós vendas 24h</div>
             </div>
         </div>
     </nav>
 
     <!-- Coluna do meio -->
-    <article class="coluna-meio">
+    <article class="coluna-meio" class="grid-item">
         <!-- Carrossel -->
         <div class="carousel" id="image-container">
             <img src="static/img/img1.png" class="active" alt="Imagem 1">
@@ -62,33 +77,62 @@
             </div>
 
             <div class="indicators">
-                <span class="active"></span>
-                <span></span>
-                <span></span>
+                <span class="active">1</span>
+                <span>2</span>
+                <span>3</span>
             </div>
         </div>
 
         <!-- Formulário -->
-        <form id="contato-form">
-            <input type="text" id="nome" name="nome" placeholder="Nome">
-            <input type="email" id="email" name="email" placeholder="Email">
-            <input type="tel" id="telefone" name="telefone" placeholder="Telefone">
-            <input type="submit" value="Enviar">
+
+        <h1>Obrigado por clicar no meu anúncio</h1><br>
+        <h2>Solicite uma cotação gratuita</h2>
+        <form id="contato-form" class="grid-item">
+            <input type="text" id="nome" name="nome" placeholder="Nome" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
+            <input type="plano" id="planointeresse" name="planointeresse" placeholder="Plano de interesse:" required>
+
+            <input type="submit" value="Favor enviar uma cotação ">
         </form>
     </article>
 
     <!-- Coluna direita -->
-    <div class="coluna-direita" id="ads">
-        <section id="sobre">
-            <h2>Sobre mim</h2>
-            <p>Sou Rogerio Vieira, especialista em planos de saúde, ajudando pessoas a encontrarem a melhor opção para cuidar da sua saúde e bem-estar.</p>
+    <div class="coluna-direita" id="ads" class="grid-item">
+        <section id="sobre" class="grid-item">
+
+            <div id="planos-direita">
+                <img src="static/img/saobernardosamp-icone.jpg" alt="SaoBernardoSamp" width="150"><br>
+                <img src="static/img/LOGO-bluzz.svg" alt="Bluzz" width="150"><br>
+                <img src="static/img/Logo_plamedh.png" alt="Plaemdh" width="150"><br>
+                <img src="static/img/logo-novasaude.webp" alt="NovaSaude" width="150"><br>
+            </div>
+
+            <div id="sobremim">
+                <h2>Sobre mim</h2><br>
+                <img src="static/img/eubonito100x133.jpg" alt="Foto de Rogerio Vieira">
+                <style max-width: 100px;></style>
+                <br>
+                <p>Sou Rogerio Vieira, especialista em planos de saúde, ajudando pessoas a encontrarem a melhor opção
+                    para
+                    cuidar da sua saúde e bem-estar.
+                    Experiência de mais de 10 anos na area, atuando em todo o território do Brasil.
+                </p>
+
+            </div>
         </section>
     </div>
 
-    <footer>
+    <footer class="grid-item">
         <p>&copy; 2026 Rogerio Vieira - Todos os direitos reservados</p>
-      
+
+        <!-- outros elementos do footer -->
+        <a href="#" class="chat-icon" title="Chat online do Zapier">
+            <i class="fab fa-zap" aria-hidden="true"></i>
+        </a>
+
     </footer>
 </body>
-    <script src="static/js/scripts.js"></script>
+<script src="static/js/scripts.js"></script>
+
 </html>
