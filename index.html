@@ -13,46 +13,31 @@
 
 <body>
     <header>
-  <div class="logo">
-    <div><img src="static/img/icons8-coração-com-pulso.gif" alt="coracao-com-pulso" class="coracao-com-pulso"></div>
-    <img src="static/img/Logo-RVC-300x90.png" alt="logo-topo" class="logo-topo">
-    <span>RVC Assessoria</span>
-  </div>
-  <div class="contact-info">
-    <p>Rogerio Vieira</p>
-    <a href="mailto:rogeriovc1000@gmail.com">Email</a>
-    <a href="tel:+5527995277207">Telefone</a>
-    <a href="https://wa.me/5527995277207">WhatsApp</a>
-  </div>
-</header>
-<!--     
-    <header id="pageHeader" class="grid-item">
-         Logo 
-        
-        
-
-        <!-- Título 
-        <h2>RVC Assessoria em Planos de Saúde</h2>
-
-        <!-- Contatos 
-        <div class="contact-info">
-            <p>
-                <i class="fas fa-envelope"></i>
-                Email: <a href="mailto:rogeriovc1000@gmail.com">rogeriovc1000@gmail.com</a>
-
-            </p>
-            <p>
-                <i class="fas fa-phone"></i>
-                Telefone: (27) 99527-7207
-            </p>
-            <p>
-                <i class="fab fa-whatsapp" style="font-size:25px; color:green;"></i>
-                <a href="https://api.whatsapp.com/send?phone=5527995277207" target="_blank">
-                    Clique aqui para enviar mensagem no WhatsApp
-                </a>
-            </p>
+    <div class="header-content">
+        <div class="logo-area">
+            <img src="static/img/icons8-coração-com-pulso.gif" alt="Coração com pulso" class="coracao-pulso">
+            <div class="logo">
+                <img src="static/img/Logo-RVC-300x90.png" alt="Logo RVC" class="logo-topo">
+                <span class="rvc">RVC Assessoria em Planos de Saúde</span>
+            </div>
         </div>
-    </header> -->
+
+        <div class="contact-info">
+            <a href="mailto:rogeriovc1000@gmail.com" class="contact-item">
+                <img class="icon-email" src="static/img/gmail-icon-free-png.png" alt="Ícone Email">
+                <span>rogeriovc1000@gmail.com</span>
+            </a>
+            <a href="tel:27995277207" class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>(27) 27995277207</span>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=5527995277207" class="contact-item">
+                <img class="icon-zap" src="static/img/icone-zap.svg" alt="Ícone WhatsApp">
+            </a>
+        </div>
+    </div>
+</header>
+
     <!-- Coluna esquerda -->
     <nav class="coluna-esquerda" class="grid-item" id="nav">
 
@@ -99,7 +84,6 @@
 
         <!-- Formulário -->
 
-        <h1>Obrigado por clicar no meu anúncio</h1><br>
         <h2>Solicite uma cotação gratuita</h2>
         <form id="contato-form" class="grid-item">
             <input type="text" id="nome" name="nome" placeholder="Nome" required>
@@ -107,7 +91,7 @@
             <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
             <input type="plano" id="planointeresse" name="planointeresse" placeholder="Plano de interesse:" required>
 
-            <input type="submit" value="Favor enviar uma cotação ">
+            <input type="submit" value="Favor enviar uma cotação" onclick="openWhatsApp()"> 
         </form>
     </article>
 
@@ -130,7 +114,7 @@
                 <p>Sou Rogerio Vieira, especialista em planos de saúde, ajudando pessoas a encontrarem a melhor opção
                     para
                     cuidar da sua saúde e bem-estar.
-                    Experiência de mais de 10 anos na area, atuando em todo o território do Brasil.
+                    Experiência de mais de 10 anos na area, atuando em todo o Brasil.
                 </p>
 
             </div>
@@ -138,7 +122,7 @@
     </div>
 
     <footer class="grid-item">
-        <p>&copy; 2026 Rogerio Vieira - Todos os direitos reservados</p>
+        <p>&copy; 2026 RVC Assessoria em Planos de Saúde - Todos os direitos reservados</p>
 
         <!-- outros elementos do footer -->
         <a href="#" class="chat-icon" title="Chat online do Zapier">
