@@ -3,3 +3,4 @@ criando minha landingpage para captação de leads de planos de saúde. Aceito s
 
 Usei: HTML, CSS, JAVASCRIPT, VSCODE, EXTENSAO WINDSURF IA me ajudou em alguns procedimentos.
 Objetivo da página: captar leads que vem de anuncios.
+https://rogeriovctecnico-commits.github.io/meusite/ link pra visita e ver como está o desenvolvimento.
