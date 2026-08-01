@@ -85,8 +85,7 @@ const iconZap = document.querySelector('.icon-zap');
 iconZap.addEventListener('click', () => {
     const zap= '5527995277207';
     window.location.href = `https://api.whatsapp.com/send?phone=${zap}`;
-});
-document.getElementById('contato-form').addEventListener('submit', function (e) {
+});document.getElementById('contato-form').addEventListener('submit', function (e) {
     e.preventDefault();
 
     const nome = document.getElementById('nome').value.trim();
@@ -99,12 +98,28 @@ document.getElementById('contato-form').addEventListener('submit', function (e) 
         return;
     }
 
-    enviarEmail(nome, email, telefone, plano);
-    enviarWhatsApp(nome, email, telefone, plano);
+    const btn = document.getElementById('btn-enviar');
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+
+    enviarEmail(nome, email, telefone, plano)
+        .then(() => {
+            mostrarMensagemSucesso();
+            document.getElementById('contato-form').reset();
+            enviarWhatsApp(nome, email, telefone, plano);
+        })
+        .catch(err => {
+            console.error('Erro ao enviar email:', err);
+            alert('Houve um erro ao enviar sua cotação. Tente novamente ou fale conosco pelo WhatsApp.');
+        })
+        .finally(() => {
+            btn.disabled = false;
+            btn.textContent = 'Favor enviar uma cotação';
+        });
 });
 
 function enviarEmail(nome, email, telefone, plano) {
-    fetch('https://formsubmit.co/ajax/rogeriovc1000@gmail.com', {
+    return fetch('https://formsubmit.co/ajax/rogeriovc1000@gmail.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
@@ -114,17 +129,23 @@ function enviarEmail(nome, email, telefone, plano) {
             'Plano de interesse': plano,
             _subject: 'Nova cotação solicitada - Site RVC'
         })
-    })
-    .then(res => res.json())
-    .then(() => {
-        document.getElementById('contato-form').reset();
-    })
-    .catch(err => console.error('Erro ao enviar email:', err));
+    }).then(res => {
+        if (!res.ok) throw new Error('Falha no envio do email');
+        return res.json();
+    });
 }
 
 function enviarWhatsApp(nome, email, telefone, plano) {
     const numeroWhatsApp = '5527995277207';
     const mensagem = `Olá! Gostaria de uma cotação de plano de saúde.\n\nNome: ${nome}\nEmail: ${email}\nTelefone: ${telefone}\nPlano de interesse: ${plano}`;
     const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensagem)}`;
-    window.open(url, '_blank');
+    setTimeout(() => window.open(url, '_blank'), 1200);
+}
+
+function mostrarMensagemSucesso() {
+    const msg = document.getElementById('mensagem-sucesso');
+    msg.style.display = 'block';
+    setTimeout(() => {
+        msg.style.display = 'none';
+    }, 6000);
 }
