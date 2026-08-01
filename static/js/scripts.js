@@ -86,3 +86,45 @@ iconZap.addEventListener('click', () => {
     const zap= '5527995277207';
     window.location.href = `https://api.whatsapp.com/send?phone=${zap}`;
 });
+document.getElementById('contato-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const plano = document.getElementById('planointeresse').value.trim();
+
+    if (!nome || !email || !telefone || !plano) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+    }
+
+    enviarEmail(nome, email, telefone, plano);
+    enviarWhatsApp(nome, email, telefone, plano);
+});
+
+function enviarEmail(nome, email, telefone, plano) {
+    fetch('https://formsubmit.co/ajax/rogeriovc1000@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+            Nome: nome,
+            Email: email,
+            Telefone: telefone,
+            'Plano de interesse': plano,
+            _subject: 'Nova cotação solicitada - Site RVC'
+        })
+    })
+    .then(res => res.json())
+    .then(() => {
+        document.getElementById('contato-form').reset();
+    })
+    .catch(err => console.error('Erro ao enviar email:', err));
+}
+
+function enviarWhatsApp(nome, email, telefone, plano) {
+    const numeroWhatsApp = '5527995277207';
+    const mensagem = `Olá! Gostaria de uma cotação de plano de saúde.\n\nNome: ${nome}\nEmail: ${email}\nTelefone: ${telefone}\nPlano de interesse: ${plano}`;
+    const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+}
