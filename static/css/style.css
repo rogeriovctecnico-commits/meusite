@@ -1,0 +1,385 @@
+/* RESET E REGRAS GERAIS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #1A2B23;
+    background-color: #F4F6F5;
+    line-height: 1.5;
+}
+
+/* IMAGENS RESPONSIVAS (EVITA FICAR GigANTE) */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #0F3D2B;
+    color: #fff;
+}
+
+header .logo {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #C8972A;
+}
+
+header .logo span {
+    color: #fff;
+}
+
+.header-contacts a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 0.9rem;
+}
+
+.header-cta {
+    background: #C8972A;
+    color: #0F3D2B;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* CONTAINER PRINCIPAL / HERO */
+.hero-section {
+    padding: 40px 5%;
+    background: #0F3D2B;
+    color: #fff;
+}
+
+.hero-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-badge {
+    font-size: 0.85rem;
+    color: #C8972A;
+    margin-bottom: 10px;
+}
+
+.hero-title-wrapper h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.lead {
+    font-size: 1rem;
+    color: #D1E0D9;
+    margin-bottom: 20px;
+}
+
+.trust-strip {
+    display: flex;
+    gap: 15px;
+    font-size: 0.85rem;
+    color: #A3B8B0;
+}
+
+/* FORMULÁRIO */
+.form-card {
+    background: #fff;
+    color: #1A2B23;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.form-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.form-card .sub {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.field-group {
+    margin-bottom: 12px;
+}
+
+.field-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.field-group input, .field-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.consent-group {
+    display: flex;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.form-actions-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.btn-action {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: #fff;
+}
+
+.btn-whatsapp svg {
+    width: 18px;
+    height: 18px;
+    fill: #fff;
+}
+
+.btn-contact {
+    background: #0F3D2B;
+    color: #fff;
+}
+
+.form-privacidade {
+    font-size: 0.75rem;
+    text-align: center;
+    color: #888;
+    margin-top: 8px;
+}
+
+/* SEÇÕES GERAIS COM CONTROLADOR DE LARGURA */
+.section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.infra-section, .planos-section, .diferenciais-section, .sobre {
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #0F3D2B;
+}
+
+/* GRIDS LIMITADOS */
+.grid-2col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.infra-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.infra-card img {
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.planos-img {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.diferencial-card img {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* SOBRE MIM */
+.sobre-grid {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.sobre-foto {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.sobre-creds {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    font-size: 0.85rem;
+}
+
+/* FOOTER & CTA */
+.cta-final {
+    background: #0F3D2B;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cta-final h2 {
+    color: #fff;
+}
+
+.btn-hero-primary {
+    display: inline-block;
+    background: #C8972A;
+    color: #0F3D2B;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+footer {
+    background: #0A291D;
+    color: #A3B8B0;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+}
+
+/* BOTÕES FLUTUANTES */
+.wpp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 99;
+}
+
+.wpp-float svg {
+    width: 28px;
+    height: 28px;
+    fill: #fff;
+}
+
+.mobile-cta-bar {
+    display: none;
+}
+
+/* RESPONSIVIDADE MOBILE */
+@media (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+    .header-contacts {
+        display: none;
+    }
+    .sobre-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+    .wpp-float {
+        bottom: 70px;
+    }
+    .mobile-cta-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #25D366;
+        color: #fff;
+        text-align: center;
+        padding: 12px;
+        font-weight: 700;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        z-index: 100;
+    }
+    .mobile-cta-bar svg {
+        width: 20px;
+        height: 20px;
+        fill: #fff;
+    }
+}
+
+/* OCULTAR CAMPO HONEYPOT DEFINITIVAMENTE */
+.hp-field, 
+input[name="website"] {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+}
+
+/* PADRONIZAR ALTURA DAS IMAGENS DA INFRAESTRUTURA */
+.infra-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
