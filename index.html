@@ -4,13 +4,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fale com a RVC Assessoria | Cotação Grátis MedSênior</title>
+    <title>Fale com a RVC Assessoria | Cotação Grátis de Plano de Saúde</title>
     <meta name="description"
-        content="Fale direto com Rogério Vieira, especialista em planos de saúde MedSênior na Grande Vitória. Atendimento pessoal, sem enrolação, resposta rápida no WhatsApp." />
+        content="Fale direto com Rogério Vieira, especialista em planos de saúde na Grande Vitória. Atendimento pessoal, sem enrolação, resposta rápida no WhatsApp." />
     <link rel="canonical" href="https://www.rvcplanosdesaude.com.br/contato" />
 
     <link rel="icon"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230F3D2B'/%3E%3Ctext x='50' y='68' font-size='54' font-family='Georgia,serif' font-weight='700' fill='%23C8972A' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="RVC Assessoria" />
+    <meta property="og:title" content="Fale com a RVC Assessoria | Cotação Grátis" />
+    <meta property="og:description"
+        content="Atendimento pessoal com Rogério Vieira. Resposta rápida, sem burocracia, direto no WhatsApp." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,54 +25,773 @@
         href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,500&family=DM+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
 
-    <!-- ARQUIVO DE ESTILOS SEPARADO -->
-    <link rel="stylesheet" href="static/css/style.css" />
-
     <!-- Google tag (gtag.js) - Google Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18391504650"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        function gtag() {dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'AW-18391504650');
-
-        function gtag_report_conversion(url) {
-            var callback = function () {
-                if (typeof (url) != 'undefined' && url !== '') {
-                    window.location = url;
-                }
-            };
-            if (typeof gtag === 'function') {
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-18391504650/AyOzCOnzxuQcEIqu4MFE',
-                    'event_callback': callback
-                });
-            } else {
-                callback();
-            }
-            return false;
-        }
     </script>
 
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "InsuranceAgency",
-      "name": "RVC Assessoria",
-      "founder": "Rogério Vieira",
-      "areaServed": ["Vitória", "Vila Velha", "Serra", "Cariacica", "Viana", "Guarapari", "Fundão"],
-      "url": "https://www.rvcplanosdesaude.com.br/",
-      "telephone": "+5527995277207",
-      "email": "rogeriovc1000@gmail.com",
-      "priceRange": "Gratuito para o cliente",
-      "address": { "@type": "PostalAddress", "addressRegion": "ES", "addressCountry": "BR" }
-    }
-    </script>
+  {
+    "@context": "https://schema.org",
+    "@type": "InsuranceAgency",
+    "name": "RVC Assessoria",
+    "founder": "Rogério Vieira",
+    "areaServed": ["Vitória", "Vila Velha", "Serra", "Cariacica", "Viana", "Guarapari", "Fundão"],
+    "url": "https://www.rvcplanosdesaude.com.br/",
+    "telephone": "+5527995277207",
+    "email": "rogeriovc1000@gmail.com",
+    "priceRange": "Gratuito para o cliente",
+    "address": { "@type": "PostalAddress", "addressRegion": "ES", "addressCountry": "BR" }
+  }
+  </script>
+
+    <style>
+        :root {
+            --verde-base: #082218;
+            --verde-card: #0D3526;
+            --verde-destaque: #134B36;
+            --dourado: #C8972A;
+            --dourado-claro: #E4B857;
+            --texto-claro: #F5F7F6;
+            --texto-sub: #A3B8B0;
+            --borda-escura: rgba(255, 255, 255, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--verde-base);
+            color: var(--texto-claro);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            line-height: 1.15;
+            color: var(--texto-claro);
+        }
+
+        em {
+            font-style: italic;
+            color: var(--dourado);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 24px;
+            background: var(--verde-base);
+            border-bottom: 1px solid var(--borda-escura);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .logo {
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: 22px;
+            color: var(--texto-claro);
+        }
+
+        .logo span {
+            color: var(--dourado);
+            font-weight: 500;
+        }
+
+        .header-contacts {
+            display: flex;
+            gap: 18px;
+            font-size: 14px;
+            color: var(--texto-sub);
+            flex-wrap: wrap;
+        }
+
+        .header-contacts a {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .header-cta {
+            background: var(--dourado);
+            color: #000;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 100px;
+            font-size: 14px;
+            white-space: nowrap;
+            transition: transform .15s ease, background-color .2s ease;
+        }
+
+        .header-cta:hover {
+            transform: translateY(-2px);
+            background: var(--dourado-claro);
+        }
+
+        /* HERO */
+        .hero {
+            background: var(--verde-base);
+            padding: 40px 24px 24px;
+        }
+
+        .hero-inner {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            font-size: 13px;
+            letter-spacing: .04em;
+            color: var(--dourado-claro);
+            border: 1px solid rgba(200, 151, 42, .4);
+            padding: 6px 14px;
+            border-radius: 100px;
+            margin-bottom: 22px;
+        }
+
+        .hero-intro {
+            background: var(--verde-base);
+            padding: 8px 24px 36px;
+        }
+
+        .hero-intro .hero-inner {
+            max-width: 780px;
+        }
+
+        .hero-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+
+        .hero-avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--dourado);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            flex-shrink: 0;
+        }
+
+        .hero h1,
+        .hero-intro h1 {
+            font-size: clamp(28px, 4vw, 40px);
+            max-width: 640px;
+            margin-bottom: 0;
+        }
+
+        .hero p.lead,
+        .hero-intro p.lead {
+            font-size: 16px;
+            color: var(--texto-sub);
+            max-width: 520px;
+            margin-bottom: 24px;
+        }
+
+        .promo-cards-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .promo-card {
+            width: 100%;
+            min-width: 0;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .promo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .promo-cards-wrapper {
+                grid-template-columns: 1fr;
+                max-width: 340px;
+            }
+
+            .promo-card {
+                height: 320px;
+            }
+        }
+
+        .promo-card {
+            background: transparent;
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            height: 400px;
+        }
+
+        @media (max-width: 600px) {
+            .promo-card {
+                height: 320px;
+            }
+        }
+
+        .promo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 14px;
+            display: block;
+        }
+
+        .trust-strip {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13.5px;
+            color: var(--texto-sub);
+        }
+
+        .trust-item .dot {
+            color: var(--dourado);
+            font-size: 16px;
+        }
+
+        /* FORMULÁRIO - SEÇÃO CENTRAL (CRO) */
+        .form-section {
+            background: var(--verde-base);
+            padding: 0 24px 56px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .form-card {
+            background: linear-gradient(165deg, rgba(19, 75, 54, 0.85) 0%, rgba(13, 53, 38, 0.95) 100%);
+            border: 1px solid rgba(200, 151, 42, 0.45);
+            border-radius: 16px;
+            padding: 24px 22px;
+            color: var(--texto-claro);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, .6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            backdrop-filter: blur(8px);
+            width: 100%;
+            max-width: 560px;
+        }
+
+        .form-badge-top {
+            align-self: flex-start;
+            background: rgba(200, 151, 42, 0.15);
+            border: 1px solid var(--dourado);
+            color: var(--dourado-claro);
+            font-size: 10.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+
+        .form-card h2 {
+            font-size: 21px;
+            line-height: 1.2;
+            margin-bottom: 4px;
+            color: #FFFFFF;
+        }
+
+        .form-card .sub {
+            font-size: 12.5px;
+            color: var(--texto-sub);
+            margin-bottom: 16px;
+        }
+
+        .hp-field {
+            position: absolute;
+            left: -9999px;
+            opacity: 0;
+        }
+
+        .form-fields-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        @media (max-width: 600px) {
+            .form-fields-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .field-group {
+            margin-bottom: 12px;
+        }
+
+        .field-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .field-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--dourado-claro);
+        }
+
+        .field-group input,
+        .field-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13.5px;
+            background: rgba(0, 0, 0, 0.35);
+            color: var(--texto-claro);
+            transition: all 0.2s ease;
+        }
+
+        .field-group input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .field-group select option {
+            background: var(--verde-card);
+            color: var(--texto-claro);
+        }
+
+        .field-group input:focus,
+        .field-group select:focus {
+            outline: none;
+            border-color: var(--dourado);
+            box-shadow: 0 0 0 3px rgba(200, 151, 42, 0.25);
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .consent-group {
+            display: flex;
+            gap: 8px;
+            font-size: 11px;
+            color: var(--texto-sub);
+            align-items: flex-start;
+            margin: 6px 0 14px;
+            cursor: pointer;
+        }
+
+        .consent-group input {
+            margin-top: 2px;
+            accent-color: var(--dourado);
+            cursor: pointer;
+        }
+
+        .form-actions-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .form-actions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .btn-action {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 13.5px;
+            cursor: pointer;
+            transition: all .2s ease;
+        }
+
+        .btn-action svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #1DA851 100%);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, .45);
+            filter: brightness(1.05);
+        }
+
+        .btn-contact {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--texto-claro);
+            border: 1px solid var(--borda-escura);
+        }
+
+        .btn-contact:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--dourado);
+        }
+
+        .form-privacidade {
+            font-size: 10.5px;
+            color: var(--texto-sub);
+            text-align: center;
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+
+        .form-sucesso {
+            text-align: center;
+            font-size: 14px;
+            padding: 16px 0;
+            color: var(--dourado-claro);
+            line-height: 1.5;
+        }
+
+        /* SEÇÃO OPERADORAS */
+        .strip {
+            background: var(--verde-card);
+            border-top: 1px solid var(--borda-escura);
+            border-bottom: 1px solid var(--borda-escura);
+            padding: 22px 24px;
+            overflow: hidden;
+        }
+
+        .strip-inner {
+            max-width: 1080px;
+            margin: 0 auto;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .strip-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            color: var(--dourado-claro);
+            margin-right: 6px;
+        }
+
+        .op-badge {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--texto-claro);
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--borda-escura);
+            padding: 6px 14px;
+            border-radius: 100px;
+        }
+
+        /* SOBRE MIM */
+        .sobre {
+            padding: 70px 24px;
+            background: var(--verde-base);
+        }
+
+        .sobre-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media (max-width: 700px) {
+            .sobre-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .sobre-foto {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--dourado);
+            margin: 0 auto;
+        }
+
+        .sobre-tag {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            color: var(--dourado);
+            margin-bottom: 8px;
+        }
+
+        .sobre h2 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .sobre p {
+            color: var(--texto-sub);
+            font-size: 15.5px;
+            max-width: 560px;
+        }
+
+        .sobre-creds {
+            display: flex;
+            gap: 20px;
+            margin-top: 18px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 700px) {
+            .sobre-creds {
+                justify-content: center;
+            }
+        }
+
+        .cred {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--dourado-claro);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* BENEFÍCIOS */
+        .beneficios {
+            background: var(--verde-card);
+            padding: 70px 24px;
+        }
+
+        .beneficios .section-tag {
+            color: var(--dourado-claro);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            margin-bottom: 8px;
+        }
+
+        .beneficios h2 {
+            font-size: 28px;
+            margin-bottom: 36px;
+            max-width: 520px;
+        }
+
+        .ben-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        @media (max-width: 860px) {
+            .ben-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .ben-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .ben-item {
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid var(--borda-escura);
+            border-radius: 12px;
+            padding: 20px;
+            font-size: 14px;
+            color: var(--texto-sub);
+        }
+
+        .ben-item .ico {
+            font-size: 22px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* CTA FINAL */
+        .cta-final {
+            padding: 80px 24px;
+            text-align: center;
+            background: var(--verde-base);
+        }
+
+        .cta-final .tag {
+            color: var(--dourado);
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+        }
+
+        .cta-final h2 {
+            font-size: 32px;
+            margin: 12px 0 10px;
+        }
+
+        .cta-final p {
+            color: var(--texto-sub);
+            margin-bottom: 28px;
+        }
+
+        .btn-hero-primary {
+            display: inline-block;
+            background: var(--dourado);
+            color: #000;
+            font-weight: 700;
+            padding: 15px 30px;
+            border-radius: 100px;
+            font-size: 15px;
+            transition: transform .15s ease, background-color .2s ease;
+        }
+
+        .btn-hero-primary:hover {
+            transform: translateY(-2px);
+            background: var(--dourado-claro);
+        }
+
+        footer {
+            background: #04120D;
+            color: var(--texto-sub);
+            text-align: center;
+            padding: 28px 24px;
+            font-size: 12.5px;
+            border-top: 1px solid var(--borda-escura);
+        }
+
+        /* WHATSAPP FLUTUANTE */
+        .wpp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 26px rgba(0, 0, 0, .5);
+            z-index: 60;
+            transition: bottom 0.2s ease;
+        }
+
+        .wpp-float svg {
+            width: 28px;
+            height: 28px;
+            fill: #fff;
+        }
+
+        /* BARRA FIXA MOBILE */
+        .mobile-cta-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #25D366;
+            color: #ffffff;
+            text-align: center;
+            font-weight: 700;
+            padding: 14px;
+            z-index: 60;
+            font-size: 15px;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.4);
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .mobile-cta-bar svg {
+            width: 20px;
+            height: 20px;
+            fill: #fff;
+        }
+
+        @media (max-width: 700px) {
+            .mobile-cta-bar {
+                display: flex;
+            }
+
+            .wpp-float {
+                bottom: 70px;
+            }
+
+            body {
+                padding-bottom: 54px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- HEADER -->
     <header>
         <div class="logo">RVC<span> Assessoria</span></div>
         <div class="header-contacts">
@@ -73,48 +799,67 @@
             <a href="mailto:rogeriovc1000@gmail.com">✉️ rogeriovc1000@gmail.com</a>
         </div>
         <a href="https://api.whatsapp.com/send?phone=5527995277207&text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20cotação%20do%20plano%20MedSênior."
-            class="header-cta" target="_blank" onclick="return gtag_report_conversion(this.href);">Falar no WhatsApp →</a>
+            class="header-cta" target="_blank">Falar no WhatsApp →</a>
     </header>
 
-    <!-- HERO SECTION COM FORMULÁRIO -->
-    <section class="hero-section">
-        <div class="hero-container">
-            <div class="hero-text">
-                <div class="hero-badge">✦ RVC Assessoria · Grande Vitória</div>
-                <div class="hero-title-wrapper">
-                    <h1>O Plano de Saúde Especializado na Terceira Idade</h1>
+    <!-- IMAGENS DA PROMOÇÃO - TOPO DO SITE -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">✦ Rogério Vieira · RVC Assessoria · Grande Vitória</div>
+
+            <div class="promo-cards-wrapper">
+                <div class="promo-card">
+                    <img src="static/img/medsenior-pf-30%25-outubro.jpeg"
+                        alt="MedSênior Pessoa Física - Promoção de Outubro com 30% de desconto">
                 </div>
-                <p class="lead">
-                    Cuide da sua saúde com quem entende de medicina preventiva, estrutura própria e atendimento
-                    humanizado na Grande Vitória. Receba sua cotação em minutos!
-                </p>
-                <div class="trust-strip">
-                    <div class="trust-item"><span class="dot">●</span> Resposta em até 10 minutos</div>
-                    <div class="trust-item"><span class="dot">●</span> +500 clientes atendidos</div>
-                    <div class="trust-item"><span class="dot">●</span> Corretor credenciado ANS</div>
+
+                <div class="promo-card">
+                    <img src="static/img/medsenior-pme-30%25-outubro.jpeg"
+                        alt="MedSênior Empresarial PME - Promoção de Outubro com 30% de desconto">
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- FORMULÁRIO DE COTAÇÃO -->
-            <div class="form-card" id="cotacao">
-                <span class="form-badge-top">✦ Tabela Atualizada</span>
-                <h2>Solicite uma Cotação Grátis</h2>
-                <p class="sub">Preencha abaixo para receber os valores atualizados:</p>
+    <!-- TEXTO DE APRESENTAÇÃO -->
+    <section class="hero-intro">
+        <div class="hero-inner">
+            <div class="hero-title-wrapper">
+                <img src="static/img/eubonitoia2.webp" alt="Foto de Rogério Vieira" class="hero-avatar">
+                <h1>Fale comigo agora e receba sua cotação <em>em minutos</em></h1>
+            </div>
+            <p class="lead">
+                Sem robô, sem call center. Você fala direto comigo, conto sua necessidade
+                e já te mando as melhores opções de plano de saúde da região.
+            </p>
+            <div class="trust-strip">
+                <div class="trust-item"><span class="dot">●</span> Resposta em até 10 minutos</div>
+                <div class="trust-item"><span class="dot">●</span> +500 clientes atendidos</div>
+                <div class="trust-item"><span class="dot">●</span> Corretor credenciado ANS</div>
+            </div>
+        </div>
+    </section>
 
-                <form id="contatoForm" onsubmit="return false;">
-                    <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off">
+    <!-- FORMULÁRIO - SEÇÃO DO MEIO -->
+    <section class="form-section">
+        <div class="form-card" id="cotacao-section">
+            <span class="form-badge-top">✦ Atendimento Humanizado</span>
+            <h2>Solicite sua Cotação Grátis</h2>
+            <p class="sub">Preencha abaixo para receber os valores atualizados:</p>
 
+            <form id="contatoForm" onsubmit="return false;">
+                <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off">
+
+                <div class="form-fields-grid">
                     <div class="field-group">
                         <label for="nome">Seu Nome Completo *</label>
                         <input type="text" id="nome" name="nome" placeholder="Ex: Maria Silva" required>
                     </div>
-
                     <div class="field-group">
                         <label for="telefone">Seu WhatsApp *</label>
                         <input type="tel" id="telefone" name="telefone" placeholder="(27) 99999-9999" required>
                     </div>
-
-                    <div class="field-group">
+                    <div class="field-group full-width">
                         <label for="planointeresse">Plano de Interesse</label>
                         <select id="planointeresse" name="planointeresse">
                             <option value="MedSênior">MedSênior (Terceira Idade / 49+)</option>
@@ -123,77 +868,55 @@
                             <option value="Familiar">Familiar</option>
                             <option value="Empresarial (PME)">Empresarial (PME)</option>
                         </select>
+                        <div class="field-group">
+                            <label for="email">Seu E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com"
+                                autocomplete="email">
+                        </div>
                     </div>
+                </div>
 
-                    <label class="consent-group">
-                        <input type="checkbox" name="lgpd" required checked>
-                        <span>Autorizo o contato para envio da cotação personalizada (LGPD).</span>
-                    </label>
+                <label class="consent-group">
+                    <input type="checkbox" name="lgpd" required checked>
+                    <span>Autorizo o contato para envio da cotação personalizada (LGPD).</span>
+                </label>
 
-                    <div class="form-actions-grid">
-                        <button type="button" class="btn-action btn-whatsapp"
-                            onclick="processarEnvio('whatsapp', this)">
-                            <svg viewBox="0 0 24 24">
-                                <path
-                                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.157 4.228 4.301-1.129z" />
-                            </svg>
-                            VER TABELA NO WHATSAPP
-                        </button>
-                        <button type="button" class="btn-action btn-contact" onclick="processarEnvio('salvar', this)">
-                            Me chame no WhatsApp
-                        </button>
-                    </div>
-                    <p class="form-privacidade">🔒 Seus dados estão 100% seguros.</p>
-                </form>
-            </div>
+                <div class="form-actions-grid">
+                    <button type="button" class="btn-action btn-whatsapp" onclick="processarEnvio('whatsapp', this)">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.157 4.228 4.301-1.129z" />
+                        </svg>
+                        Receber no WhatsApp
+                    </button>
+                    <button type="button" class="btn-action btn-contact" onclick="processarEnvio('salvar', this)">
+                        Prefiro por E-mail
+                    </button>
+                </div>
+                <p class="form-privacidade">🔒 Seus dados estão 100% seguros. Não enviamos spam.</p>
+            </form>
         </div>
     </section>
 
-    <!-- INFRAESTRUTURA E ATENDIMENTO MEDSÊNIOR -->
-    <section class="infra-section">
-        <div class="section-inner">
-            <h2>Nossa Infraestrutura & Atendimento Exclusivo</h2>
-            <div class="grid-2col">
-                <div class="infra-card">
-                    <img src="static/img/imagensmedsenior.gif" alt="Hospital MedSênior Vitória - ES">
-                    <p><strong>Rede Própria de Hospitais:</strong> Hospital MedSênior em Vitória - ES e centros de
-                        diagnósticos de ponta.</p>
-                </div>
-                <div class="infra-card">
-                    <img src="static/img/recepcaoMedsenior.png" alt="Atendimento Especializado MedSênior">
-                    <p><strong>Atendimento Humanizado:</strong> Equipe médica dedicada e recepções preparadas para o seu
-                        conforto.</p>
-                </div>
-            </div>
+    <!-- OPERADORAS -->
+    <div class="strip">
+        <div class="strip-inner">
+            <span class="strip-label">Operadoras parceiras</span>
+            <span class="op-badge">Medsenior</span>
+            <span class="op-badge">Best Senior</span>
+            <span class="op-badge">Unimed</span>
+            <span class="op-badge">Amil</span>
+            <span class="op-badge">SulAmérica</span>
+            <span class="op-badge">Bradesco Saúde</span>
+            <span class="op-badge">Porto Seguro</span>
+            <span class="op-badge">Hapvida</span>
+            <span class="op-badge">NotreDame</span>
+            <span class="op-badge">São Bernardo Samp</span>
+            <span class="op-badge">Bluzz Saúde</span>
+            <span class="op-badge">Plamedh</span>
+            <span class="op-badge">Nova Saúde</span>
         </div>
-    </section>
-
-    <!-- PLANOS DE SAÚDE MEDSÊNIOR -->
-    <section class="planos-section">
-        <div class="section-inner">
-            <h2>Conheça Nossos Planos MedSênior</h2>
-            <img src="static/img/planosMedsenior.png" alt="Planos MedSênior ES3, ES4, Black e Infinite"
-                class="planos-img">
-        </div>
-    </section>
-
-    <!-- DIFERENCIAIS MEDSÊNIOR -->
-    <section class="diferenciais-section">
-        <div class="section-inner">
-            <h2>Por que escolher a MedSênior?</h2>
-            <div class="diferenciais-grid">
-                <div class="diferencial-card">
-                    <img src="static/img/diferenciaisMedsenior.png" alt="Sem coparticipação e 08 Estados">
-                </div>
-                <div class="diferencial-card">
-                    <img src="static/img/diferenciaisMedsenior2.png" alt="Plano exclusivo 49+ e 45 Unidades Próprias">
-                </div>
-                <div class="diferencial-card">
-                    <img src="static/img/diferenciaisMedsenior1.png" alt="Programa Bem Envelhecer e 92% de aprovação">
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <!-- SOBRE MIM -->
     <section class="sobre">
@@ -204,14 +927,29 @@
                 <h2>Quem vai cuidar da sua cotação sou eu mesmo</h2>
                 <p>
                     Sou Rogério Vieira, especialista em planos de saúde há mais de 10 anos.
-                    Atendo pessoalmente cada cliente na Grande Vitória — sem terceirizar para call center. Você fala
-                    comigo do início ao fim.
+                    Atendo pessoalmente cada cliente na Grande Vitória — sem terceirizar
+                    pra call center, sem enrolação. Você fala comigo do início ao fim.
                 </p>
                 <div class="sobre-creds">
                     <span class="cred">✅ Corretor credenciado ANS</span>
                     <span class="cred">✅ +10 anos de experiência</span>
-                    <span class="cred">✅ Atendimento pessoal e humanizado</span>
+                    <span class="cred">✅ Atendimento pessoal se o cliente desejar</span>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section class="beneficios">
+        <div class="section-inner">
+            <p class="section-tag">Por que falar comigo</p>
+            <h2>Atendimento direto, sem letrinha miúda</h2>
+            <div class="ben-grid">
+                <div class="ben-item"><span class="ico">🔍</span>Comparo todas as operadoras da região pra você.</div>
+                <div class="ben-item"><span class="ico">💰</span>Serviço 100% gratuito — você paga o preço de tabela.
+                </div>
+                <div class="ben-item"><span class="ico">⚡</span>Resposta rápida, direto no seu WhatsApp.</div>
+                <div class="ben-item"><span class="ico">🤝</span>Suporte no pós-venda sempre que precisar.</div>
             </div>
         </div>
     </section>
@@ -219,10 +957,10 @@
     <!-- CTA FINAL -->
     <section class="cta-final">
         <span class="tag">Cotação gratuita & sem compromisso</span>
-        <h2>Pronto para escolher o melhor plano?</h2>
-        <p>Leva menos de 1 minuto. Preencha o formulário no topo ou me chame no WhatsApp.</p>
+        <h2>Pronto pra falar comigo?</h2>
+        <p>Leva menos de 1 minuto. Preencha o formulário acima ou me chame no WhatsApp.</p>
         <a href="https://api.whatsapp.com/send?phone=5527995277207&text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20cotação%20do%20plano%20MedSênior."
-            class="btn-hero-primary" target="_blank" onclick="return gtag_report_conversion(this.href);">Falar no WhatsApp Agora →</a>
+            class="btn-hero-primary" target="_blank">Falar no WhatsApp Agora →</a>
     </section>
 
     <footer>
@@ -231,18 +969,18 @@
         © 2026 · Todos os direitos reservados
     </footer>
 
-    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <!-- BOTÃO FLUTUANTE DE WHATSAPP -->
     <a href="https://api.whatsapp.com/send?phone=5527995277207&text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20cotação%20do%20plano%20MedSênior."
-        class="wpp-float" target="_blank" title="Fale pelo WhatsApp" onclick="return gtag_report_conversion(this.href);">
+        class="wpp-float" target="_blank" title="Fale pelo WhatsApp">
         <svg viewBox="0 0 24 24">
             <path
                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.671.15-.198.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zM20.463 3.488A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
         </svg>
     </a>
 
-    <!-- BARRA FIXA MOBILE -->
+    <!-- BARRA FIXA MOBILE DIRETA PARA O WHATSAPP -->
     <a href="https://api.whatsapp.com/send?phone=5527995277207&text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20cotação%20do%20plano%20MedSênior."
-        class="mobile-cta-bar" target="_blank" onclick="return gtag_report_conversion(this.href);">
+        class="mobile-cta-bar" target="_blank">
         <svg viewBox="0 0 24 24">
             <path
                 d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.157 4.228 4.301-1.129z" />
@@ -254,6 +992,7 @@
         const WEBHOOK_URL = 'https://n8n.labfinancas.com/webhook/leads-rvc';
 
         document.addEventListener('DOMContentLoaded', function () {
+            // Máscara de telefone
             document.querySelectorAll('[name="telefone"]').forEach(function (tel) {
                 tel.addEventListener('input', function () {
                     let v = this.value.replace(/\D/g, '').slice(0, 11);
@@ -287,15 +1026,25 @@
 
                 const nome = form.querySelector('[name="nome"]').value.trim();
                 const fone = form.querySelector('[name="telefone"]').value.trim();
+                const emailEl = form.querySelector('[name="email"]');
+                const email = emailEl ? emailEl.value.trim() : '';
                 const planoEl = form.querySelector('[name="planointeresse"]');
                 const plano = planoEl ? planoEl.value : '';
 
-                // Dispara tag de conversão do Google Ads
-                gtag_report_conversion();
+                // Disparo do evento de conversão para o Google Ads
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-18391504650/AyOzCOnzxuQcEIqu4MFE',
+                        'value': 1.0,
+                        'currency': 'BRL'
+                    });
+                }
 
                 const lead = {
                     nome,
                     telefone: fone,
+                    email,
+                    tipoPlano: plano,
                     planointeresse: plano,
                     pagina: window.location.href,
                     data: new Date().toISOString(),
@@ -306,7 +1055,7 @@
                     ? fetch(WEBHOOK_URL, {
                         method: 'POST',
                         mode: 'no-cors',
-                        headers: { 'Content-Type': 'application/json' },
+                        headers: {'Content-Type': 'application/json'},
                         body: JSON.stringify(lead)
                     }).catch(err => console.warn('Falha no webhook:', err))
                     : Promise.resolve();
@@ -327,9 +1076,9 @@
                     salvarLead.finally(() => {
                         form.innerHTML = `
                           <div class="form-sucesso">
-                            <p style="font-size: 24px; margin-bottom: 8px;">✅</p>
+                            <p style="font-size: 20px; margin-bottom: 8px;">✅</p>
                             <p>Obrigado, <strong>${nome.split(' ')[0]}</strong>!</p>
-                            <p style="font-size: 13px; color: #A3B8B0; margin-top: 6px;">Recebemos seus dados. Entrarei em contato pelo WhatsApp o mais rápido possível.</p>
+                            <p style="font-size: 12.5px; color: #A3B8B0; margin-top: 4px;">Recebemos seus dados. Entrarei em contato pelo WhatsApp o mais rápido possível.</p>
                           </div>
                         `;
                     });
